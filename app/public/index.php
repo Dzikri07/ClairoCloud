@@ -21,35 +21,9 @@
 </head>
 
 <body style="background-color: #f9f9f9;">
-<div class="d-flex">
+    <div class="d-flex">
     <!-- Sidebar -->
-    <div class="sidebar p-3 d-flex flex-column">
-        <div class="d-flex justify-content-center align-items-center mb-4 logo-container">
-            <img src="assets/image/clairo.png" alt="logo" class="me-2" style="width: 70px;">
-            <h4 class="fw-bold logo-text mb-0" style="font-family: 'Krona One', sans-serif;">
-                <span class="text-teal">C</span>lario
-            </h4>
-        </div>
-
-        <button class="upload-btn mb-4">
-            <i class="fa fa-plus me-1"></i> Upload
-        </button>
-
-        <ul class="nav flex-column mb-4">
-            <li class="nav-item"><a href="#" class="nav-link active"><i class="fa fa-home me-2"></i> Beranda</a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-layer-group me-2"></i> Semua File</a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-star me-2"></i> Favorit</a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-trash me-2"></i> Sampah</a></li>
-        </ul>
-
-        <div class="storage mt-auto">
-            <p class="fw-bold small mb-1">Penyimpanan</p>
-            <div class="progress" style="height: 6px;">
-                <div class="progress-bar bg-info" style="width: 70%;"></div>
-            </div>
-            <p class="small text-muted mt-1">3,5 GB dari 5 GB Terpakai</p>
-        </div>
-    </div>
+    <?php include __DIR__ . '/sidebar.php'; ?>
 
     <!-- Main -->
     <div class="main flex-grow-1 p-4">
