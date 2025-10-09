@@ -4,24 +4,30 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clario Cloud Storage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </head>
 <body>
     <div class="d-flex">
         <!-- Sidebar -->
         <div class="sidebar p-3 d-flex flex-column">
-            <div class="text-center mb-4">
-                <img src="https://cdn-icons-png.flaticon.com/512/6195/6195699.png" alt="logo" class="logo mb-2">
-                <h4 class="fw-bold text-primary">Clario</h4>
-            </div>
-            <button class="btn btn-light w-100 mb-3 shadow-sm upload-btn">
-                <i class="fa fa-plus me-2"></i> Upload
+        <div class="d-flex justify-content-center align-items-center mb-4 logo-container">
+        <img src="assets/image/clairo.png" alt="logo" class="me-2" style="width: 70px;">
+        <h4 class="fw-bold logo-text mb-0">
+            <span class="teal">C</span>lario
+        </h4>
+        </div>
+
+            <button class="upload-btn">
+                <i class="fa fa-plus"></i> Upload
             </button>
+
             <ul class="nav flex-column mb-4">
                 <li class="nav-item"><a href="#" class="nav-link active"><i class="fa fa-home me-2"></i> Beranda</a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-layer-group me-2"></i> Semua File</a></li>
@@ -41,10 +47,16 @@
         <div class="main flex-grow-1 p-4">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h4 class="fw-bold">Beranda</h4>
-                <div class="d-flex align-items-center">
-                    <input type="text" class="form-control rounded-pill" placeholder="Telusuri file..." style="width: 300px;">
-                    <i class="fa fa-gear ms-3 fs-5"></i>
-                    <i class="fa fa-user ms-3 fs-5"></i>
+                <div class="d-flex align-items-center header-controls">
+                    <div class="search-bar">
+                        <input type="text" class="form-control" placeholder="Telusuri file...">
+                        <!-- bulleted list icon (3 lines + 3 bullets) inside the input -->
+                        <span class="iconify list-icon" data-icon="mdi:format-list-bulleted" data-inline="false" title="List"></span>
+                    </div>
+                    <!-- gear settings (stays outside the input) -->
+                    <span class="iconify gear-icon ms-3" data-icon="mdi:settings" data-inline="false" title="Pengaturan"></span>
+                    <!-- user/profile icon (outside the input) -->
+                    <i class="fa fa-user fs-5 user-icon ms-3" title="Akun"></i>
                 </div>
             </div>
 
