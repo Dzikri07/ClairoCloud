@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: ./app
+    volumes:
+      - ./app:/var/www/html
+    networks:
+      - clario_net
+
+  web:
+    image: nginx:latest
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./app:/var/www/html
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    networks:
+      - clario_net
+
+networks:
+  clario_net:
+    driver: bridge

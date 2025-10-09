@@ -1,0 +1,41 @@
+
+body {
+    background-color: #f8fafc;
+}
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #eee;
+}
+.sidebar .logo {
+    width: 60px;
+}
+.sidebar .nav-link {
+    color: #444;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #e7f6f9;
+    color: #0aa6c2;
+}
+.upload-btn {
+    background-color: #dff8ff;
+    transition: all 0.3s ease;
+}
+.upload-btn:hover {
+    background-color: #b8f0ff;
+    transform: scale(1.03);
+}
+.file-card {
+    background: #ffffff;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
