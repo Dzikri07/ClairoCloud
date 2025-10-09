@@ -1,9 +1,10 @@
+/* === GLOBAL === */
 body {
   background-color: #ffffff;
   font-family: "Inter", sans-serif;
 }
 
-/* Sidebar */
+/* === SIDEBAR === */
 .sidebar {
   width: 260px;
   height: 100vh;
@@ -15,7 +16,7 @@ body {
   padding: 0 0 20px 0;
 }
 
-/* Logo Clario */
+/* === LOGO CLARIO === */
 .logo-container {
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@ body {
   color: #00bfa6;
 }
 
-/* Tombol Upload */
+/* === TOMBOL UPLOAD === */
 .upload-btn {
   background-color: #ffffff;
   color: #000;
@@ -55,7 +56,7 @@ body {
   gap: 6px;
   width: 85%;
   margin: 10px auto 20px auto;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: all 0.25s ease;
 }
 
@@ -64,7 +65,11 @@ body {
   transform: scale(1.03);
 }
 
-/* Menu Navigasi */
+.upload-btn i {
+  font-size: 18px; /* ukuran ikon “+” */
+}
+
+/* === NAVIGASI === */
 .sidebar .nav {
   padding: 0;
   margin: 0;
@@ -90,7 +95,7 @@ body {
   color: #0f5b69;
 }
 
-/* Penyimpanan */
+/* === PENYIMPANAN === */
 .storage-section {
   padding: 0 20px;
 }
@@ -105,8 +110,20 @@ body {
   background-color: #00bfa6;
   border-radius: 10px;
 }
-.upload-btn i { font-size: 18px; /* ukuran ikon “+” */ } .file-card { background: #fff5f5; border-radius: 12px; transition: all 0.2s ease; } .file-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); }
 
+/* === FILE CARD === */
+.file-card {
+  background: #fff5f5;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.file-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === SEARCH BAR === */
 .search-bar {
   position: relative;
   display: inline-flex;
@@ -119,8 +136,7 @@ body {
   color: #333;
   border-radius: 50px;
   padding: 8px 16px;
-  /* leave room on the right for the icons */
-  padding-right: 4rem;
+  padding-right: 4rem; /* ruang kanan untuk ikon */
   width: 300px;
   transition: all 0.3s ease;
 }
@@ -135,31 +151,94 @@ body {
   box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.3);
 }
 
-/* Iconify settings icon inside the input */
+/* === IKON DALAM SEARCH BAR === */
 .search-bar .list-icon {
   position: absolute;
-  right: 1.6rem; /* sits inside the input */
+  right: 1.6rem;
   font-size: 1.15rem;
   color: #4a4a4a;
   cursor: pointer;
   transition: color 0.2s ease;
   z-index: 2;
 }
+
 .search-bar .list-icon:hover {
   color: #00bfa6;
 }
 
-/* gear and user icons live outside the input */
+/* === IKON LUAR (GEAR & USER) === */
 .gear-icon {
   font-size: 1.2rem;
   color: #4a4a4a;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
+
 .gear-icon:hover {
   color: #00bfa6;
 }
+
 .user-icon {
   font-size: 1.05rem;
   color: #333;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.user-icon:hover {
+  color: #00bfa6;
+}
+
+/* === APP BAR / HEADER === */
+.app-bar {
+  padding: 0.25rem 0;
+}
+
+.app-bar .home .search-bar {
+  margin-left: 0.75rem;
+}
+
+.header-section {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+/* === VIEW TOGGLE (GRID / LIST) === */
+.view-toggle {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #000;
+  border-radius: 50px;
+  background-color: #fff;
+  padding: 3px;
+  width: fit-content;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn.active {
+  background-color: #c4eded;
+}
+
+.toggle-btn:hover {
+  background-color: #e9fafa;
+}
+
+/* (untuk tombol Bootstrap jika masih dipakai di bagian lain) */
+.view-switch .btn {
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.view-switch .btn.active,
+.view-switch .btn:hover {
+  background-color: #0dcaf0;
+  color: white;
 }
