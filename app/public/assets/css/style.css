@@ -37,8 +37,10 @@ body {
   letter-spacing: 1px;
 }
 
-.logo-text .teal {
-  color: #00bfa6;
+.logo-text .teal,
+.logo-text .text-teal,
+.text-teal {
+  color: #007364 !important;
 }
 
 /* === TOMBOL UPLOAD === */
