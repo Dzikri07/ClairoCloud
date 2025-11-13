@@ -1,6 +1,13 @@
 <?php
 // sidebar.php - extracted sidebar markup with active link detection
 $current = basename($_SERVER['SCRIPT_NAME']);
+
+// pastikan helper tersedia ketika sidebar di-include dari halaman lain
+if (!function_exists('ensure_session')) {
+    require_once __DIR__ . '/file_functions.php';
+}
+ensure_session();
+$me = current_user();
 ?>
 <div class="sidebar p-3 d-flex flex-column">
     <div class="d-flex justify-content-center align-items-center mb-4 logo-container">
@@ -23,6 +30,13 @@ $current = basename($_SERVER['SCRIPT_NAME']);
         <li class="nav-item"><a href="semuafile.php" class="nav-link <?php echo ($current === 'semuafile.php') ? 'active' : ''; ?>"><i class="fa fa-layer-group me-2"></i> Semua File</a></li>
         <li class="nav-item"><a href="favorit.php" class="nav-link <?php echo ($current === 'favorit.php') ? 'active' : ''; ?>"><i class="fa fa-star me-2"></i> Favorit</a></li>
         <li class="nav-item"><a href="sampah.php" class="nav-link <?php echo ($current === 'sampah.php') ? 'active' : ''; ?>"><i class="fa fa-trash me-2"></i> Sampah</a></li>
+
+        <!-- tampilkan menu khusus admin -->
+        <?php if ($me && isset($me['role']) && $me['role'] === 'admin'): ?>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="admin_users.php"><i class="fa fa-users-cog me-2"></i>Kelola User</a>
+        </li>
+        <?php endif; ?>
     </ul>
 
     <div class="storage mt-auto">

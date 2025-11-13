@@ -1,0 +1,20 @@
+{
+    "name": "clairocloud/app",
+    "description": "ClairoCloud - Cloud Storage Application",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "aws/aws-sdk-php": "^3.281"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClairoCloud\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "process-timeout": 900
+    }
+}

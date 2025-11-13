@@ -1,0 +1,14 @@
+{
+    "admin": {
+        "password": "$2y$10$I.cStQuvKkmXCUDngWRebeADZU\/6wN86Vl7u8zR0U5.BrVt4M.52e",
+        "role": "admin",
+        "email": "admin@example.com",
+        "quota": 10737418240
+    },
+    "user": {
+        "password": "$2y$10$.0RbmhSEGWkpgd7qfHLiNOn.68xFgZLdXw2LXVXSy7PXtzjhzeSvi",
+        "role": "user",
+        "email": "user@example.com",
+        "quota": 5368709120
+    }
+}
